@@ -5,6 +5,8 @@ import root.Main;
 import java.util.ArrayList;
 
 public class Database extends ArrayList<User>{
+   
+   //TODO Finish CreditCard Implementation
    private ArrayList<CreditCardInfo> creditCards;
    
    //TODO: Check this
@@ -12,6 +14,20 @@ public class Database extends ArrayList<User>{
    
    }
    
+   private static Database single_instance = null;
+   
+   //TODO Make this a singleton?
+/*
+   // static method to create instance of Singleton class
+    public static Database getInstance() {
+        if (single_instance == null)
+            single_instance = new Database();
+
+        return single_instance;
+    }
+   */
+
+
    //TODO: was changeStatus(String Username, boolean newStatus)
    public void changeStatus(Player player, boolean newStatus) {
       //Checks is the player is in the database
@@ -27,10 +43,11 @@ public class Database extends ArrayList<User>{
       return true;
    }
    
-   public Player retrievePlayerInfo(String Username){
+   //TODO was retrievePlayerInfo
+   public User retrieveUserInfo(String Username){
       for (User user: this){
-         if (user.getUsername().toLowerCase().equals(Username.toLowerCase()) && user instanceof Player){
-            return (Player) user;
+         if (user.getUsername().toLowerCase().equals(Username.toLowerCase())){
+            return  user;
          }
       }
       return null;

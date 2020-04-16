@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="322.0" prefWidth="328.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CreateAccountPageController">
+   <children>
+      <Button fx:id="ConfirmButton" layoutX="411.0" layoutY="333.0" mnemonicParsing="false" onAction="#onConfirmClick" text="Confirm" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="100.0" />
+      <Button fx:id="CancelButton" layoutX="507.0" layoutY="333.0" mnemonicParsing="false" onAction="#OnCancelClick" text="Cancel" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="36.0" />
+      <TextField fx:id="UsernameTF" layoutX="117.0" layoutY="83.0" AnchorPane.leftAnchor="117.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="83.0" />
+      <TextField fx:id="EmailTF" layoutX="117.0" layoutY="168.0" AnchorPane.leftAnchor="117.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="168.0" />
+      <TextField fx:id="PasswordTF" layoutX="117.0" layoutY="126.0" AnchorPane.leftAnchor="117.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="125.0" />
+      <Label layoutX="34.0" layoutY="88.0" prefHeight="17.0" prefWidth="57.0" text="Username" AnchorPane.leftAnchor="34.0" AnchorPane.rightAnchor="237.0" AnchorPane.topAnchor="88.0" />
+      <Label layoutX="34.0" layoutY="130.0" prefHeight="17.0" prefWidth="57.0" text="Password" AnchorPane.leftAnchor="34.0" AnchorPane.rightAnchor="237.0" AnchorPane.topAnchor="130.0" />
+      <Label layoutX="47.0" layoutY="173.0" text="Email" AnchorPane.leftAnchor="47.0" AnchorPane.rightAnchor="251.0" AnchorPane.topAnchor="172.0" />
+      <Label layoutX="24.0" layoutY="216.0" text="Account Type" />
+      <ChoiceBox fx:id="AccountTypeChoiceBox" layoutX="123.0" layoutY="211.0" AnchorPane.leftAnchor="123.0" AnchorPane.rightAnchor="55.0" AnchorPane.topAnchor="211.0" />
+   </children>
+</AnchorPane>

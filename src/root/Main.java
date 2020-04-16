@@ -1,7 +1,9 @@
 package root;
 
+import ObjectClasses.Advertiser;
 import ObjectClasses.Database;
 import ObjectClasses.Player;
+import ObjectClasses.User;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -11,6 +13,7 @@ import javafx.stage.Stage;
 public class Main extends Application {
     
     public static Database UserDatabase;
+    public static User currentUser;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
