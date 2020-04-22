@@ -5,7 +5,6 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="322.0" prefWidth="328.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CreateAccountPageController">
    <children>
       <Button fx:id="ConfirmButton" layoutX="411.0" layoutY="333.0" mnemonicParsing="false" onAction="#onConfirmClick" text="Confirm" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="100.0" />

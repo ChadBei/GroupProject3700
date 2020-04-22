@@ -6,9 +6,10 @@ public class TournamentInfo {
    
    private  int numOfPlayers;
    private  int numOfMatches;
-   //TODO: private ??? style
+   private String style;
    private Date startDate;
    private String description;
+   
    //TODO: private Advertiser Sponsor
    
    public TournamentInfo(int numOfPlayers, int numOfMatches, Date startDate, String description) {
@@ -19,6 +20,14 @@ public class TournamentInfo {
    }
    
    public TournamentInfo() {
+   }
+   
+   public String getStyle() {
+      return style;
+   }
+   
+   public void setStyle(String style) {
+      this.style = style;
    }
    
    public int getNumOfPlayers() {

@@ -6,11 +6,9 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import ObjectClasses.Player;
-import ObjectClasses.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -43,18 +41,26 @@ public class LoginPageController {
    
    @FXML
    public void onClickLogin(ActionEvent event){
-      
-      
+      sendLogin();
+   }
+   
+   private void sendLogin(){
       if (!(Main.UserDatabase.contains(new Player(UsernameTF.getText(), PasswordTF.getText())))) {
          //Show Invalid User Popup
          showPopUp("Invalid Login", "Login did not match a current user, try a different combination.");
+      } else {
+         acceptInfo(UsernameTF.getText(),PasswordTF.getText());
+         Stage stage = (Stage)(LoginBtn.getScene().getWindow());
+         stage.close();
+         openBrowsePage();
       }
-      
+   }
+   
+   
+   private void acceptInfo(String Username, String Password){
       //Upon Successful Login, print to the console the logged in user, and set them as the current user
       System.out.println("Login Success:" + Main.UserDatabase.retrieveUserInfo(UsernameTF.getText()));
       Main.currentUser = Main.UserDatabase.retrieveUserInfo(UsernameTF.getText());
-      
-      
    }
    
    @FXML
@@ -94,5 +100,25 @@ public class LoginPageController {
       }
    }
    
+   public void onClickSpectator(ActionEvent event){
+      Main.currentUser = new Player("Spectator","Spectator","None");
+      Stage stage = (Stage)(LoginBtn.getScene().getWindow());
+      stage.close();
+      openBrowsePage();
+   }
    
+   private void openBrowsePage(){
+      try {
+         FXMLLoader loader = new FXMLLoader();
+         loader.setLocation(getClass().getResource("../res/Layout/BrowsePage.fxml"));
+         Parent root2 = loader.load();
+         Stage stage = new Stage();
+         stage.setTitle("Browse");
+         stage.setScene(new Scene(root2));
+         stage.show();
+      }
+      catch (IOException e) {
+         e.printStackTrace();
+      }
+   }
 }

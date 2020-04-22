@@ -3,18 +3,14 @@ package Controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import root.Main;
 
-import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 
-public class PopUpController implements Initializable {
+public class PopUpController  {
    
    @FXML
    private Label popUpLabel;
@@ -25,12 +21,21 @@ public class PopUpController implements Initializable {
    
    
    @FXML
-   private Button confirmButton;
+   public Button confirmButton;
    
    @FXML
    void onConfirmClicked(ActionEvent event) {
+      
+      //Reset the Current User
+      Main.currentUser = null;
+   
+      Node source = (Node)  event.getSource();
+      Stage root  = (Stage) source.getScene().getWindow();
+      root.close();
+      
       Stage stage = (Stage) confirmButton.getScene().getWindow();
       stage.close();
+      
    }
    
    public void setPopUpLabel(String label){
@@ -39,11 +44,6 @@ public class PopUpController implements Initializable {
    
    public void setSecondaryPopUpLabel(String label){
       secondaryLabel.setText(label);
-   }
-   
-   @Override
-   public void initialize(URL location, ResourceBundle resources) {
-   
    }
    
    

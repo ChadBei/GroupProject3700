@@ -11,6 +11,14 @@ public class Player extends User {
       super.setPassword(password);
       setLOStatus(false);
    }
+   
+   public Player(String username, String password, String email){
+      super.setUsername(username);
+      super.setPassword(password);
+      super.setEmailAddress(email);
+      setLOStatus(false);
+   }
+   
    public Player(String username, String password, boolean status){
       super.setUsername(username);
       super.setPassword(password);

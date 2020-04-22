@@ -10,14 +10,14 @@ public class Database extends ArrayList<User>{
    private ArrayList<CreditCardInfo> creditCards;
    
    //TODO: Check this
-   public static void findLoginInfo(){
-   
+   public static boolean findLoginInfo(){
+      return false;
    }
    
    private static Database single_instance = null;
    
-   //TODO Make this a singleton?
-/*
+
+
    // static method to create instance of Singleton class
     public static Database getInstance() {
         if (single_instance == null)
@@ -25,8 +25,7 @@ public class Database extends ArrayList<User>{
 
         return single_instance;
     }
-   */
-
+    
 
    //TODO: was changeStatus(String Username, boolean newStatus)
    public void changeStatus(Player player, boolean newStatus) {
@@ -43,7 +42,7 @@ public class Database extends ArrayList<User>{
       return true;
    }
    
-   //TODO was retrievePlayerInfo
+   //TODO: was retrievePlayerInfo
    public User retrieveUserInfo(String Username){
       for (User user: this){
          if (user.getUsername().toLowerCase().equals(Username.toLowerCase())){

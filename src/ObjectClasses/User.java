@@ -14,26 +14,26 @@ public abstract class User {
    public void setEmailAddress(String emailAddress) {
       EmailAddress = emailAddress;
    }
-
+   
    
    public User() {
       Username = null;
       Password = null;
    }
    
-   public User(String username, String password){
+   public User(String username, String password) {
       Username = username;
       Password = password;
    }
-
    
-   public User(String username, String password, String emailAddress){
+   
+   public User(String username, String password, String emailAddress) {
       Username = username;
       Password = password;
       EmailAddress = emailAddress;
    }
    
-   public User(String username, String password, String emailAddress, boolean loStatus){
+   public User(String username, String password, String emailAddress, boolean loStatus) {
       Username = username;
       Password = password;
       EmailAddress = emailAddress;
@@ -55,7 +55,9 @@ public abstract class User {
       Password = password;
    }
    
-   
-   //TODO: public void clickUsername() - What is it
-   
+   /*
+   public void clickUsername(){
+   Generates a popup menu for options to promote/demote different users to different statuses
+   }
+   */
 }
