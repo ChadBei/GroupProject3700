@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.BrowsePageController">
+   <children>
+      <Label layoutX="245.0" layoutY="14.0" text="Browse" AnchorPane.leftAnchor="245.0" AnchorPane.rightAnchor="245.0" AnchorPane.topAnchor="16.0">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="200.0" layoutX="26.0" layoutY="100.0" stroke="BLACK" strokeType="INSIDE" width="200.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="32.0" AnchorPane.topAnchor="100.0" />
+      <Label layoutX="61.0" layoutY="192.0" text="Unimplemented Forum1" AnchorPane.bottomAnchor="199.0" AnchorPane.leftAnchor="61.0" AnchorPane.topAnchor="184.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="200.0" layoutX="347.0" layoutY="100.0" stroke="BLACK" strokeType="INSIDE" width="200.0" AnchorPane.bottomAnchor="100.0" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="100.0" />
+      <Label layoutX="402.0" layoutY="184.0" text="Unimplemented Forum2" AnchorPane.bottomAnchor="199.0" AnchorPane.rightAnchor="65.0" AnchorPane.topAnchor="184.0" />
+      <Label fx:id="UsernameDispTF" layoutX="46.0" layoutY="21.0" text="Username: " />
+      <Label fx:id="UserEmailDispTF" layoutX="46.0" layoutY="51.0" text="Email: " />
+      <Button fx:id="LogOutBtn" layoutX="269.0" layoutY="340.0" mnemonicParsing="false" onAction="#onLogOutClicked" text="Log Out" AnchorPane.bottomAnchor="32.0" AnchorPane.leftAnchor="269.0" AnchorPane.rightAnchor="269.0" />
+   </children>
+</AnchorPane>

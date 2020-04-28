@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="139.0" prefWidth="426.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PopUpController">
+   <children>
+      <Button fx:id="confirmButton" layoutX="157.0" layoutY="97.0" mnemonicParsing="false" onAction="#onConfirmClicked" text="Okay" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="157.0" AnchorPane.rightAnchor="157.0" />
+      <Label fx:id="popUpLabel" alignment="CENTER" layoutX="115.0" layoutY="14.0" text="SampleText" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label fx:id="secondaryLabel" alignment="CENTER" layoutX="139.0" layoutY="61.0" text="SecondaryText" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" />
+   </children>
+</AnchorPane>
